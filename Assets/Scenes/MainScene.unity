@@ -716,7 +716,7 @@ Transform:
   m_GameObject: {fileID: 342558736}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 1.5, z: -8}
+  m_LocalPosition: {x: 0.3, y: 1.5, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -790,6 +790,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 24452a5d622db9a4bb147bbe1450243d, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 9e1731dd636f6874eb5a9435655f8273,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 9e1731dd636f6874eb5a9435655f8273,
         type: 3}
       propertyPath: m_ApplyRootMotion
@@ -1130,6 +1135,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526443815}
   m_CullTransparentMesh: 1
+--- !u!1001 &541201192
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1191333824}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_Name
+      value: Ely By K.Atienza
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b5553a71df5c1194e81f398bee0ae959, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 46a8046228829f742961bef80b0cdecd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 947831877}
+  m_SourcePrefab: {fileID: 100100000, guid: 46a8046228829f742961bef80b0cdecd, type: 3}
+--- !u!4 &541201193 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46a8046228829f742961bef80b0cdecd,
+    type: 3}
+  m_PrefabInstance: {fileID: 541201192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &804803382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1204,6 +1292,30 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 358398853}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &947831875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 46a8046228829f742961bef80b0cdecd,
+    type: 3}
+  m_PrefabInstance: {fileID: 541201192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &947831876 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 46a8046228829f742961bef80b0cdecd,
+    type: 3}
+  m_PrefabInstance: {fileID: 541201192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &947831877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947831875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5a3363fe459f44887f37d746985443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,7 +1796,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191333819}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1736,11 +1848,12 @@ Transform:
   m_GameObject: {fileID: 1191333819}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.2852383, y: 1, z: 12.6}
+  m_LocalPosition: {x: 6.2852383, y: 1, z: 22.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1996844918}
+  - {fileID: 541201193}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1191333825
@@ -1759,7 +1872,8 @@ MonoBehaviour:
   drawGizmos: 1
   initPreferences:
     patrolRadius: 4
-    attackRange: 2
+    attackRange: 1.5
+    farAttackRange: 10
     sightRange: 30
     sightDistance: 15
     maxTraceDistance: 25
@@ -1767,8 +1881,10 @@ MonoBehaviour:
     maxHP: 100
     speed: 9
     currentHP: 100
-    patrolSpeed: 5
+    patrolSpeed: 2
   hpSlider: {fileID: 518529067}
+  enemyAnim: {fileID: 947831876}
+  attackType: 0
   target: {fileID: 0}
 --- !u!1 &1315076443
 GameObject:
