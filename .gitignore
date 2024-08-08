@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # 모델링 아웃
 /[Aa]ssets/FreeTestCharacterAsuna/*
+
+# 배경 아웃
+/[Aa]ssets/Versatile Studio Assets/*
