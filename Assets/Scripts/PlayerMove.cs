@@ -216,11 +216,20 @@ public class PlayerMove : ActorBase
         myStatus.currentHP = Mathf.Clamp(myStatus.currentHP - atkPower, 0, myStatus.maxHP);
         //print("내 체력: " + myStatus.currentHP);
 
-        // 카메라 로테이션 셰이킹!
-        Camera.main.GetComponent<ShakeObject>().ShakeRot();
+        if (myStatus.currentHP > 0)
+        {
+            // 카메라 로테이션 셰이킹!
+            Camera.main.GetComponent<ShakeObject>().ShakeRot();
 
-        // img_hitUI 오브젝트를 활성화했다가, 0.5초 뒤에 다시 비활성화한다.
-        StartCoroutine(DeActivateHitUI(0.5f));
+            // img_hitUI 오브젝트를 활성화했다가, 0.5초 뒤에 다시 비활성화한다.
+            StartCoroutine(DeActivateHitUI(0.5f));
+        }
+        else
+        {
+            // 화면 흑백 효과를 포스트로 켜준다.
+            PostProcessingManager.instance.GrayScaleOn();
+            cc.enabled = false;
+        }
     }
 
 
