@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class PlayerMove : ActorBase
 {
-    enum PlayerMoveState
+    public enum PlayerMoveState
     {
         Normal,
         Jump,
+        Cinematic,
     }
 
     public PlayerStateBase myStatus;
@@ -29,7 +30,8 @@ public class PlayerMove : ActorBase
     float[] idleAnims = new float[4] { 0.0f, 0.3f, 0.6f, 1.0f };
 
     CharacterController cc;
-    PlayerMoveState myMoveState = PlayerMoveState.Normal;
+    
+    public PlayerMoveState myMoveState = PlayerMoveState.Normal;
 
     // 중력을 적용하고 싶다.
     // 바닥에 충돌이 있을 때까지는 아래로 계속 내려가게 하고 싶다.
@@ -180,9 +182,13 @@ public class PlayerMove : ActorBase
     // 3. 매 프레임마다 계산된 속도로 자신의 회전값을 변경한다.
     void Rotate()
     {
-        float mouseX = Input.GetAxis("Mouse X");
-        //float mouseY = Input.GetAxis("Mouse Y");
+        float mouseX = 0;
 
+        if (myMoveState != PlayerMoveState.Cinematic)
+        {
+            mouseX = Input.GetAxis("Mouse X");
+            //float mouseY = Input.GetAxis("Mouse Y");
+        }
         // 각 축 별로 회전 값을 미리 계산한다(R = R0 + vt).
         //rotX += mouseY * rotSpeed * Time.deltaTime;
         rotY += mouseX * rotSpeed * Time.deltaTime;

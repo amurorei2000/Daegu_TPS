@@ -72,7 +72,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # 모델링 아웃
-/[Aa]ssets/FreeTestCharacterAsuna/*
+/[Aa]ssets/Modelings/FreeTestCharacterAsuna/*
+/[Aa]ssets/ModelAssets/Versatile Studio Assets/*
 
 # 배경 아웃
 /[Aa]ssets/Versatile Studio Assets/*

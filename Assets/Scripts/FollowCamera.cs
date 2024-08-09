@@ -23,13 +23,13 @@ public class FollowCamera : MonoBehaviour
 
     Coroutine zoom;
     float rate;
-    //Transform player;
+    float currentFOV;
+    float currentAlpha;
 
     CameraController camCon;
 
     void Start()
     {
-        //player = GameObject.Find("Player").transform;
         camCon = FindObjectOfType<CameraController>();
     }
 
@@ -76,17 +76,25 @@ public class FollowCamera : MonoBehaviour
         {
             zoom = StartCoroutine(ZoomInCoroutine(isIn));
         }
+        else
+        {
+            StopCoroutine(zoom);
+            StartCoroutine(ZoomInCoroutine(isIn));
+        }
     }
 
     IEnumerator ZoomInCoroutine(bool isIn)
     {
         float currentTime = 0;
+
         if (isIn)
         {
             rate = camCon.currentRate;
         }
+        currentFOV = Camera.main.fieldOfView;
+        currentAlpha = zoomUI.color.a;
 
-        while(currentTime < 0.5f)
+        while (currentTime < 0.5f)
         {
             // 다른 모든 업데이트 함수가 끝날때까지 기다린다.
             yield return new WaitForEndOfFrame();
@@ -94,12 +102,12 @@ public class FollowCamera : MonoBehaviour
 
             currentTime += Time.deltaTime;
             // 시야각을 30도로 축소
-            float startFOV = isIn ? 60 : 20;
+            float startFOV = currentFOV;
             float endFOV = isIn ? 20 : 60;
             Camera.main.fieldOfView = Mathf.Lerp(startFOV, endFOV, currentTime * 2);
 
             // 줌 UI 색상의 투명도를 1로 변경한다.
-            float zoomRate = isIn ? currentTime : 0.5f - currentTime;
+            float zoomRate = isIn ? currentTime : currentAlpha * 0.5f - currentTime;
             Color zoomAlpha = new Color(zoomUI.color.r, zoomUI.color.g, zoomUI.color.b, zoomRate * 2);
             zoomUI.color = zoomAlpha;
 
