@@ -77,3 +77,4 @@ crashlytics-build.properties
 
 # 배경 아웃
 /[Aa]ssets/Versatile Studio Assets/*
+/[Aa]ssets/Video/*

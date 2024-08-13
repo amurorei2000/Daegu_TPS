@@ -21,9 +21,15 @@ public class EnemyActionEvents : MonoBehaviour
         enemyState.attackType = Random.Range(0, 1.0f);
     }
 
-    // 타격의 순간 데미지를 부여한다.
+    // 근접 타격의 순간 데미지를 부여한다.
     public void AttackHit()
     {
         enemyState.Attack();
+    }
+
+    // 원거리 공격의 레이를 발사한다.
+    public void FarAttack()
+    {
+        enemyState.ThrowAttack();
     }
 }
