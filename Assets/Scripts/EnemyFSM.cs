@@ -429,6 +429,16 @@ public class EnemyFSM : ActorBase
             // 3-2. 타격 방향으로 일정 거리만큼을 넉백 위치로 지정한다.
             hitDir.y = 0;
             hitDirection = transform.position + hitDir * 2.5f;
+
+            // 만일, 자신과 계산된 hitDirection 사이에 장애물이 있다면...
+            Ray ray = new Ray(transform.position, hitDir);
+            RaycastHit hitInfo;
+            if(Physics.Raycast(ray, out hitInfo, 2.5f))
+            {
+                // hitDirection의 위치를 레이에 부딪힌 위치로부터 자신의 반지름만큼 앞쪽으로 설정한다.
+                hitDirection = hitInfo.point + hitDir * -1.1f * GetComponent<CapsuleCollider>().radius;
+            }
+
             smith.isStopped = true;
             smith.ResetPath();
 
