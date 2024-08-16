@@ -27,7 +27,6 @@ public class PlayerMove : ActorBase
     float yPos;
     int currentJumpCount = 0;
     float currentTime = 0;
-    bool timerStart = false;
     float[] idleAnims = new float[4] { 0.0f, 0.3f, 0.6f, 1.0f };
 
     CharacterController cc;
